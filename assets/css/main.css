@@ -1,0 +1,122 @@
+@import "navbar.css";
+
+body {
+    background-color: #dedede;
+    font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;    
+    text-align: center;
+}
+
+/* MAP */ 
+
+.mapdiv {
+    padding-top: 1em;
+    align-content: center;
+    text-align: center;
+}
+
+.interactive-title {
+    margin-bottom: .5em;
+}
+
+/* FLEX DIV */
+
+.flexDiv {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: center;
+}
+
+/* DIV ATTENDED HACKATHONS */
+
+.hackdiv {
+    padding: 4em;
+}
+
+h3 {
+    margin-block-end: 0em;
+}
+
+span {
+    font-style: italic;
+    font-size: 13px;
+    color: indigo;
+}
+
+.hackblock-org {
+    background-color: rgba(240, 128, 128, 0.61);
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+}
+
+.hackblock-online {
+    background-color: rgba(93, 146, 214, 0.61);
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+}
+
+.hackblock-spain {
+    background-color: #ce1c16b0;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+}
+
+.hackblock-netherland {
+    background-color: #4c59cf9c;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+}
+
+.hackblock-denmark {
+    background-color: #005e3896;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+}
+
+.hackblock-swizerland {
+    background-color: #f18629a1;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+}
+
+.hackblock-ruiscothland {
+    background-color: #3cc954a6;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+}
+
+.hackblock-usa {
+    background-color: #7a15cc85;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+}
