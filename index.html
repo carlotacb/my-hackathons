@@ -5,28 +5,72 @@
 		<title>Carlota's hackathons</title>
 		<meta charset="utf-8" />
         <link rel="stylesheet" href="assets/css/main.css" />
-        
+
         <!-- Libraries -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    
-    <body>        
-        <div class="mapdiv">
-            <h1 class="interactive-title">Interactive map</h1>
-            <iframe width="80%" height="576" src="https://maphub.net/embed/122025?panel=1" frameborder="0"></iframe>
-        </div>
+
+    <body>
+        <div id="map" style="height:60vh;"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+        <script>
+          var map = L.map('map').setView([50, 5], 5);
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+          }).addTo(map);
+
+          // Helper: build a colored icon
+          function coloredIcon(color) {
+            return L.icon({
+              iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`,
+              shadowUrl: 'https://unpkg.com/leaflet/dist/images/marker-shadow.png',
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+              shadowSize: [41, 41]
+            });
+          }
+
+          // Your points
+          var points = [
+            { name: "HEX 2018", coords: [51.4478060346287, 5.454412928798138], color: "red" },
+            { name: "CopenHacks 2018 & 2019", coords: [55.77304158520258, 12.50854879631971], color: "red" },
+            { name: "HackEPS 2018, 2019, 2022, 2023 & 2024", coords: [41.60860223730882, 0.6234005092132167], color: "red" },
+            { name: "HackUPC 2018", coords: [41.38899950685139, 2.1136004631896688], color: "red" },
+            { name: "LauzHack 2018, 2019", coords: [46.51951339376388, 6.566650309405791], color: "red" },
+            { name: "RoyalHackaway 2019", coords: [51.42567881568118, -0.5613505596975759], color: "red" },
+            { name: "HackCU 2019", coords: [40.00919711602901, -105.24193734163748], color: "red" },
+            { name: "HackUPC 2019, 2021, 2022, 2023, 2024 & 2025", coords: [41.38899950685139, 2.1136004631896688], color: "gold" },
+            { name: "bitsxlaMarato 2019, 2020, 2021 & 2022", coords: [41.38899950685139, 2.1136004631896688], color: "gold" },
+            { name: "HackTheBurgh 2020", coords: [55.94674127961416, -3.1988642899392143], color: "red" },
+            { name: "Junction 2022", coords: [60.18510442510737, 24.832450269546563], color: "red" },
+            { name: "Junction 2023", coords: [60.16180, 24.90440], color: "red" },
+            { name: "HackTheNorth 2022", coords: [43.47300003815075, -80.54520815948298], color: "red" },
+          ];
+
+          // Add markers
+          points.forEach(p => {
+            L.marker(p.coords, { icon: coloredIcon(p.color) })
+              .addTo(map)
+              .bindPopup(p.name);
+          });
+        </script>
+
 
         <div class="iconsDiv">
             <div style="margin-right: 14px"><i class="fa fa-globe" style="font-size: large;"></i> Hackathon website.</div>
             <div><i class="fa fa-link" style="font-size: large;"></i> Hackathon projects.</div>
         </div>
-        
+
         <div class="flexDiv">
             <div class="hackdiv">
-                <h1>Organized hackathons</h1>
-                <div class="hackblock hackblock-org">  
+                <h2>Organized hackathons (11)</h2>
+                <div class="hackblock hackblock-org">
                     <div class="linkblock">
                         <div>
                             <h3>HackUPC 2019</h3>
@@ -107,8 +151,8 @@
                             <span>May 2022 - 36 hours (Barcelona, Catalonia)</span>
                         </div>
                         <div>
-                            <a href="https://www.hackupc.com/" target="_blank"><i class="fa fa-globe" style="font-size: x-large;"></i></a>
-                            <a href="https://hackupc2022.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
+                            <a href="https://2022.hackupc.com/" target="_blank"><i class="fa fa-globe" style="font-size: x-large;"></i></a>
+                            <a href="https://hackupc-2022.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
                         </div>
                     </div>
                     <p> I was the <b>Co-Director</b> in the first in-person edition of HackUPC after the covid pandemic. We had the challenge of having a new team that have not been to a hackathon before and making a hack for a lot of new timers after a long break due the covid pandemic.</p>
@@ -124,24 +168,66 @@
                             <a href="https://bitsxlamarato-2022.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
                         </div>
                     </div>
-                    <p> My team and I helped organizing this supportive hackathon against the heart health for La Marató de TV3. 20 projects were built and we collected +2k€ on donations during that weekend. </p>
+                    <p> My team and I helped to organize this supportive hackathon against the heart health for La Marató de TV3. 20 projects were built and we collected +2k€ on donations during that weekend. </p>
                 </div>
                 <div class="hackblock hackblock-org">
                     <div class="linkblock">
                         <div>
                             <h3>HackUPC 2023</h3>
-                            <span>TBD - 36 hours (Barcelona, Catalonia)</span>
+                            <span>May 2023 - 36 hours (Barcelona, Catalonia)</span>
+                        </div>
+                        <div>
+                            <a href="https://2023.hackupc.com/" target="_blank"><i class="fa fa-globe" style="font-size: x-large;"></i></a>
+                            <a href="https://hackupc-2023.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
+                        </div>
+                    </div>
+                    <p> I was the <b>Co-Director</b> of the first fully in-person hackathon we handled after the pandemic. We had the challenge of managing a new team and made them to work as a team.</p>
+                </div>
+                <div class="hackblock hackblock-org">
+                    <div class="linkblock">
+                        <div>
+                            <h3>HackUPC 2024</h3>
+                            <span>May 2024 - 36 hours (Barcelona, Catalonia)</span>
+                        </div>
+                        <div>
+                            <a href="https://2024.hackupc.com/" target="_blank"><i class="fa fa-globe" style="font-size: x-large;"></i></a>
+                            <a href="https://hackupc-2024.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
+                        </div>
+                    </div>
+                    <p> I was the <b>Logistics Director</b> and also the <b>Finance Director</b> handling the new logistics team to run alone and learn to make the own decisions and also in charge of the year's budget.</p>
+                </div>
+                <div class="hackblock hackblock-org">
+                    <div class="linkblock">
+                        <div>
+                            <h3>HackUPC 2025</h3>
+                            <span>May 2025 - 36 hours (Barcelona, Catalonia)</span>
                         </div>
                         <div>
                             <a href="https://www.hackupc.com/" target="_blank"><i class="fa fa-globe" style="font-size: x-large;"></i></a>
+                            <a href="https://hackupc-2025.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
                         </div>
                     </div>
-                    <p> I am the <b>Co-Director</b> in the edition that we are preparing.</p>
+                    <p> I was the <b>Finance Director</b> being in charge of the budget, and also helping out the webdev and logistics team to run.</p>
                 </div>
+                <br>
+                <h2>Hackathons I helped during the event (1)</h2>
+                <div class="hackblock hackblock-spain">
+                    <div class="linkblock">
+                        <div>
+                            <h3>HackUDC</h3>
+                            <span>February 2024 - 24 hours (A Coruña, Galicia)</span>
+                        </div>
+                        <div>
+                            <a href="https://hackudc-2025.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
+                        </div>
+                    </div>
+                    <p>I went as a volunteer and coach to help out the organizers in all what they need.</p>
+                </div>
+
             </div>
             <div class="hackdiv">
-                <h1>Attended hackathons</h1>
-        
+                <h2>Attended hackathons (21)</h2>
+
                 <div class="hackblock hackblock-netherland">
                     <div class="linkblock">
                         <div>
@@ -154,7 +240,7 @@
                     </div>
                     <p>This was my first hackathon. I've worked in a project that we didn't finish, it was <a href="https://github.com/paualos3/voluntinder-server" target="_blank">Voluntinder</a> a volunteering finder.</p>
                 </div>
-                <div class="hackblock hackblock-denmark">          
+                <div class="hackblock hackblock-denmark">
                     <div class="linkblock">
                         <div>
                             <h3>CopenHacks</h3>
@@ -166,7 +252,7 @@
                     </div>
                     <p>We created <a href="https://devpost.com/software/i-don-t-give-a-gig" target="_blank">I don't give a gig</a> were the users can find the best trip options for their favorites festivals.</p>
                 </div>
-                <div class="hackblock hackblock-spain">          
+                <div class="hackblock hackblock-spain">
                     <div class="linkblock">
                         <div>
                             <h3>HackUPC</h3>
@@ -214,7 +300,7 @@
                             <a href="https://royal-hackaway-v2.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
                         </div>
                     </div>
-                    
+
                     <p>We created <a href="https://github.com/sanchyy/TravelMadeSimple" target="_blank">Travel Made Simple</a> a WebApp that helps people to know more about the place you are going to visit.</p>
                 </div>
                 <div class="hackblock hackblock-usa">
@@ -227,10 +313,10 @@
                             <a href="https://hackcuv.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
                         </div>
                     </div>
-                    
+
                     <p>My first experience in a US hackathon. We built <a href="https://devpost.com/software/food-lord" target="_blank">Food Lord</a>, a calories calculator using Computer Vision.</p>
                 </div>
-                <div class="hackblock hackblock-denmark">  
+                <div class="hackblock hackblock-denmark">
                     <div class="linkblock">
                         <div>
                             <h3>CopenHacks</h3>
@@ -242,7 +328,7 @@
                     </div>
                     <p>We created <a href="https://github.com/carlotacb/timecube" target="_blank">TimeCube</a> a application made with Hardware to track the time you spend in some activities in your day.</p>
                 </div>
-                <div class="hackblock hackblock-spain">              
+                <div class="hackblock hackblock-spain">
                     <div class="linkblock">
                         <div>
                             <h3>HackEPS</h3>
@@ -265,10 +351,10 @@
                             <a href="https://lauzhack-4-0.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
                         </div>
                     </div>
-                    
+
                     <p>We created <a href="https://github.com/carlotacb/ClassController" target="_blank">ClassController</a> a WebApp with some algorism to track if there is bulling in schools.</p>
                 </div>
-                <div class="hackblock hackblock-ruiscothland">        
+                <div class="hackblock hackblock-ruiscothland">
                     <div class="linkblock">
                         <div>
                             <h3>HackTheBurgh</h3>
@@ -281,7 +367,7 @@
                     </div>
                     <p>We created <a href="https://github.com/elena20ruiz/stopthecrown" target="_blank">StopTheCrown</a> a videogame based on Papers Please but with Covid theme.</p>
                 </div>
-                <div class="hackblock hackblock-online">           
+                <div class="hackblock hackblock-online">
                     <div class="linkblock">
                         <div>
                             <h3>Hackovid</h3>
@@ -309,7 +395,7 @@
                     <div class="linkblock">
                         <div>
                             <h3>HackEPS</h3>
-                            <span>November 2021 - 24 Hours (Hybrid)</span>
+                            <span>November 2021 - 24 Hours (Hybrid - from home)</span>
                         </div>
                         <div>
                             <a href="https://hackeps2021.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
@@ -346,13 +432,61 @@
                     <div class="linkblock">
                         <div>
                             <h3>HackEPS</h3>
-                            <span>November 2021 - 24 hours (Lleida, Catalonia)</span>
+                            <span>November 2022 - 24 hours (Lleida, Catalonia)</span>
                         </div>
                         <div>
                             <a href="https://hackeps2022.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
                         </div>
                     </div>
                     <p>We created <a href="https://devpost.com/software/gsf-geo-sensor-field" target="_blank">Geo Sensor Field</a> a WebApp for helping the people that works in the fields to map all the holes and canals that they have.</p>
+                </div>
+                <div class="hackblock hackblock-findland">
+                    <div class="linkblock">
+                        <div>
+                            <h3>Junction</h3>
+                            <span>October 2023 - 36 Hours (Espoo, Finland)</span>
+                        </div>
+                        <div>
+                            <a href="https://www.junction2023.com/" target="_blank"><i class="fa fa-globe" style="font-size: x-large;"></i></a>
+                        </div>
+                    </div>
+                    <p>We created <a href=https://github.com/carlotacb/Step-bro" target="_blank">Step bro</a> a WebApp to do step competitions between friends.</p>
+                </div>
+                <div class="hackblock hackblock-spain">
+                    <div class="linkblock">
+                        <div>
+                            <h3>HackEPS</h3>
+                            <span>November 2023 - 24 hours (Lleida, Catalonia)</span>
+                        </div>
+                        <div>
+                            <a href="https://hackeps2023.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
+                        </div>
+                    </div>
+                    <p>I didn't finish any project.</p>
+                </div>
+                <div class="hackblock hackblock-spain">
+                    <div class="linkblock">
+                        <div>
+                            <h3>HackUDC</h3>
+                            <span>February 2024 - 24 hours (A Coruña, Galicia)</span>
+                        </div>
+                        <div>
+                            <a href="https://hackudc-2024.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
+                        </div>
+                    </div>
+                    <p>We did <a href="https://github.com/maariafarelo/bizaway" target="_blank">Bizamaps</a>, following a challenge for a company called Bizaway, where we create optimum routes for company trips</p>
+                </div>
+                <div class="hackblock hackblock-spain">
+                    <div class="linkblock">
+                        <div>
+                            <h3>HackEPS</h3>
+                            <span>November 2024 - 24 hours (Lleida, Catalonia)</span>
+                        </div>
+                        <div>
+                            <a href="https://hackeps2024.devpost.com/" target="_blank"><i class="fa fa-link" style="font-size: x-large;"></i></a>
+                        </div>
+                    </div>
+                    <p>We did a CTF in a team, we didn't win</p>
                 </div>
             </div>
         </div>
