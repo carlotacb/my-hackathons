@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/categoryfilter.tsx","./src/components/footer.tsx","./src/components/hackathoncard.tsx","./src/components/header.tsx","./src/components/mapview.tsx","./src/data/hackathons.ts","./src/data/types.ts"],"version":"5.9.3"}
