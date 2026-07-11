@@ -2,9 +2,36 @@ import { useEffect, useRef } from 'react';
 import maplibregl, { Map as MapLibreMap, Marker, Popup } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { hackathons } from '../data/hackathons';
-import { CATEGORY_COLORS, type Category } from '../data/types';
+import { CATEGORY_COLORS, type Category, type Hackathon } from '../data/types';
 
 const DARK_STYLE = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
+
+const DEFAULT_ICON_SVG =
+  '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M14 14l-6 6 6 6M26 14l6 6-6 6M22.5 11l-5 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function popupEntryHtml(h: Hackathon) {
+  const iconHtml = h.logoUrl
+    ? `<img src="${escapeHtml(h.logoUrl)}" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+       <span class="popup-icon-fallback">${DEFAULT_ICON_SVG}</span>`
+    : DEFAULT_ICON_SVG;
+
+  return `
+    <div class="popup-entry">
+      <div class="popup-icon" style="color:${CATEGORY_COLORS[h.category]}">${iconHtml}</div>
+      <div class="popup-text">
+        <strong>${escapeHtml(h.name)}</strong>
+        <span>${escapeHtml(h.duration)} · ${escapeHtml(h.date)} · ${escapeHtml(h.place)}</span>
+      </div>
+    </div>`;
+}
 
 interface MapViewProps {
   activeCategory: Category | 'all';
@@ -59,12 +86,7 @@ export default function MapView({ activeCategory }: MapViewProps) {
         el.className = 'map-pin';
         el.style.setProperty('--pin-color', CATEGORY_COLORS[dominant]);
 
-        const popupHtml = entries
-          .map(
-            (h) =>
-              `<strong>${h.name}</strong><br/><span>${h.date} · ${h.place}</span>`,
-          )
-          .join('<hr/>');
+        const popupHtml = entries.map(popupEntryHtml).join('<hr/>');
 
         const marker = new Marker({ element: el })
           .setLngLat([coords[1], coords[0]])

@@ -163,12 +163,73 @@ a {
   font-family: var(--font-body);
   font-size: 0.85rem;
   line-height: 1.4;
+  min-width: 220px;
+  padding: 0.75rem 0.9rem;
 }
 
 .maplibregl-popup-content hr {
   border: none;
   border-top: 1px solid var(--surface-border);
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
+}
+
+.popup-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.popup-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.popup-icon img,
+.popup-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.popup-icon img {
+  object-fit: contain;
+  padding: 4px;
+}
+
+.popup-icon svg {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.popup-icon-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.popup-text strong {
+  font-size: 0.88rem;
+  font-family: var(--font-display);
+}
+
+.popup-text span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
 .maplibregl-popup-tip {
@@ -217,7 +278,40 @@ a {
   border-color: color-mix(in srgb, var(--card-color) 50%, var(--surface-border));
 }
 
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.card-logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--card-color);
+}
+
+.card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5px;
+}
+
+.card-logo svg {
+  width: 55%;
+  height: 55%;
+}
+
 .card-head {
+  flex: 1;
+  min-width: 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;

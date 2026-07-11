@@ -220,6 +220,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'Voluntinder',
     projectUrl: 'https://github.com/paualos3/voluntinder-server',
     devpostUrl: 'https://hex.devpost.com/',
+    logoUrl: 'logos/hex2018.png',
   },
   {
     id: 'copenhacks-2018',
@@ -233,6 +234,7 @@ export const hackathons: Hackathon[] = [
     projectName: "I Don't Give a Gig",
     projectUrl: 'https://devpost.com/software/i-don-t-give-a-gig',
     devpostUrl: 'https://copenhacks2018.devpost.com/',
+    logoUrl: '/logos/copenhacks2018.png',
   },
   {
     id: 'hackupc-2018',
@@ -274,6 +276,7 @@ export const hackathons: Hackathon[] = [
     projectUrl: 'https://github.com/carlotacb/BirdPitch',
     websiteUrl: 'https://2018.lauzhack.com/',
     devpostUrl: 'https://lauzhack2018.devpost.com/',
+    logoUrl: '/logos/lauzhack.png',
   },
   {
     id: 'royal-hackaway-2019',
@@ -287,6 +290,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'Travel Made Simple',
     projectUrl: 'https://github.com/sanchyy/TravelMadeSimple',
     devpostUrl: 'https://royal-hackaway-v2.devpost.com/',
+    logoUrl: '/logos/royalhackaway.png',
   },
   {
     id: 'hackcu-2019',
@@ -300,6 +304,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'Food Lord',
     projectUrl: 'https://devpost.com/software/food-lord',
     devpostUrl: 'https://hackcuv.devpost.com/',
+    logoUrl: '/logos/HackCU.png',
   },
   {
     id: 'copenhacks-2019',
@@ -313,6 +318,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'TimeCube',
     projectUrl: 'https://github.com/carlotacb/timecube',
     devpostUrl: 'https://copenhacks2019.devpost.com/',
+    logoUrl: '/logos/copenhacks2019.png',
   },
   {
     id: 'hackeps-2019',
@@ -340,6 +346,7 @@ export const hackathons: Hackathon[] = [
     projectUrl: 'https://github.com/carlotacb/ClassController',
     websiteUrl: 'https://2019.lauzhack.com/',
     devpostUrl: 'https://lauzhack-4-0.devpost.com/',
+    logoUrl: '/logos/lauzhack.png',
   },
   {
     id: 'hacktheburgh-2020',
@@ -354,6 +361,7 @@ export const hackathons: Hackathon[] = [
     projectUrl: 'https://github.com/elena20ruiz/stopthecrown',
     websiteUrl: 'https://2020.hacktheburgh.com/',
     devpostUrl: 'https://hacktheburgh2020.devpost.com/',
+    logoUrl: '/logos/hacktheburgh.png',
   },
   {
     id: 'hackovid-2020',
@@ -404,6 +412,7 @@ export const hackathons: Hackathon[] = [
     projectUrl: 'https://devpost.com/software/only-paws',
     websiteUrl: 'https://hackthenorth.com/',
     devpostUrl: 'https://hackthenorth2022.devpost.com/',
+    logoUrl: '/logos/hackthenorth2022.png',
   },
   {
     id: 'junction-2022',
@@ -418,6 +427,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'Finncycle',
     projectUrl: 'https://github.com/carlotacb/finncycle',
     websiteUrl: 'https://www.junction2022.com/',
+    logoUrl: '/logos/junction.png',
   },
   {
     id: 'hackeps-2022',
@@ -444,6 +454,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'Step bro',
     projectUrl: 'https://github.com/carlotacb/Step-bro',
     websiteUrl: 'https://www.junction2023.com/',
+    logoUrl: '/logos/junction.png',
   },
   {
     id: 'hackeps-2023',

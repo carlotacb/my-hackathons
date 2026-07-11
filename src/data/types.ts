@@ -14,6 +14,8 @@ export interface Hackathon {
   projectUrl?: string;
   websiteUrl?: string;
   devpostUrl?: string;
+  /** URL or /public path to the hackathon's logo. Falls back to a generic icon when unset or broken. */
+  logoUrl?: string;
 }
 
 export const CATEGORY_LABELS: Record<Category, string> = {
