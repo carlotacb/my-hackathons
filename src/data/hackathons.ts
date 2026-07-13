@@ -31,6 +31,7 @@ export const hackathons: Hackathon[] = [
       'Part of the Logistics Team — my first hackathon as an organizer. Full stress and a lot of things I learnt from that weekend. It was very fun!',
     websiteUrl: 'https://2019.hackupc.com/',
     devpostUrl: 'https://hackupc2019.devpost.com/',
+    logoUrl: 'logos/HackUPC2019.png',
   },
   {
     id: 'bitsxlamarato-2019',
@@ -44,6 +45,7 @@ export const hackathons: Hackathon[] = [
       "Logistics Director. My team and I helped organize this supportive hackathon against rare diseases for La Marató de TV3. 26 projects were built and we collected over €2k in donations that weekend.",
     websiteUrl: 'https://www.fib.upc.edu/ca/la-marato/edicions-anteriors/la-marato-2019',
     devpostUrl: 'https://bitsxlamarato.devpost.com/',
+    logoUrl: 'logos/bitsperlamarato.png',
   },
   {
     id: 'bitsxlamarato-2020',
@@ -56,6 +58,7 @@ export const hackathons: Hackathon[] = [
       "Director. My team and I helped organize this supportive hackathon against Covid-19 for La Marató de TV3. 24 projects were built and we collected over €3.8k in donations that weekend.",
     websiteUrl: 'https://www.fib.upc.edu/ca/la-marato/edicions-anteriors/la-marato-2020',
     devpostUrl: 'https://bitsxlamarato-2020.devpost.com/',
+    logoUrl: 'logos/bitsperlamarato.png',
   },
   {
     id: 'hackupc-2020-21',
@@ -68,6 +71,7 @@ export const hackathons: Hackathon[] = [
       'Logistics Director in the organizing team. Helped bring some in-person spirit to the online edition by preparing the swag shipped to participants and drawing funny pizza designs to make it feel more like a real hackathon.',
     websiteUrl: 'https://2021.hackupc.com/',
     devpostUrl: 'https://hackupc2021.devpost.com/',
+    logoUrl: 'logos/HackUPC2021.png',
   },
   {
     id: 'bitsxlamarato-2021',
@@ -81,6 +85,7 @@ export const hackathons: Hackathon[] = [
       "My team and I helped organize this supportive hackathon for mental health awareness, for La Marató de TV3. 25 projects were built and we collected over €1.5k in donations that weekend.",
     websiteUrl: 'https://www.fib.upc.edu/ca/la-marato/edicions-anteriors/hackaton-la-salut-mental',
     devpostUrl: 'https://bitsxlamarato-2021.devpost.com/',
+    logoUrl: 'logos/bitsperlamarato.png',
   },
   {
     id: 'ai-sonar-2021',
@@ -91,6 +96,8 @@ export const hackathons: Hackathon[] = [
     place: 'Barcelona, Catalonia',
     coords: BARCELONA,
     description: 'My team and I helped organize a hackathon with the Sónar festival, combining AI and music.',
+    devpostUrl: 'https://ai-music-festival-hackathon.devpost.com/',
+    logoUrl: 'logos/sonar.png',
   },
   {
     id: 'hackupc-2022',
@@ -104,6 +111,7 @@ export const hackathons: Hackathon[] = [
       'Co-Director for the first in-person edition after the Covid pandemic. The challenge: a brand-new team with no prior hackathon experience, running an event for a lot of first-timers after a long pandemic break.',
     websiteUrl: 'https://2022.hackupc.com/',
     devpostUrl: 'https://hackupc-2022.devpost.com/',
+    logoUrl: 'logos/HackUPC2022.png',
   },
   {
     id: 'bitsxlamarato-2022',
@@ -117,6 +125,7 @@ export const hackathons: Hackathon[] = [
       "My team and I helped organize this supportive hackathon for heart health, for La Marató de TV3. 20 projects were built and we collected over €2k in donations that weekend.",
     websiteUrl: 'https://www.fib.upc.edu/ca/la-marato',
     devpostUrl: 'https://bitsxlamarato-2022.devpost.com/',
+    logoUrl: 'logos/bitsperlamarato.png',
   },
   {
     id: 'hackupc-2023',
@@ -130,6 +139,7 @@ export const hackathons: Hackathon[] = [
       'Co-Director of the first fully in-person hackathon we ran after the pandemic. The challenge: managing a new team and getting them to truly work as one.',
     websiteUrl: 'https://2023.hackupc.com/',
     devpostUrl: 'https://hackupc-2023.devpost.com/',
+    logoUrl: 'logos/HackUPC2023.png',
   },
   {
     id: 'hackupc-2024',
@@ -167,7 +177,8 @@ export const hackathons: Hackathon[] = [
     place: 'A Coruña, Galicia',
     coords: A_CORUNA,
     description: 'Went as a volunteer to help the organizing team with whatever was needed to keep the event running smoothly.',
-    devpostUrl: 'https://hackudc-2025.devpost.com/',
+    devpostUrl: 'https://hackudc2025.devpost.com/',
+    logoUrl: 'logos/HackUDC2025.png',
   },
 
   // ---- Coached ----
@@ -181,6 +192,7 @@ export const hackathons: Hackathon[] = [
     coords: NORTH_CAROLINA,
     description: 'First event as MLH Coach.',
     devpostUrl: 'https://hackncstate2026.devpost.com/',
+    logoUrl: 'logos/hackncstate2026.png',
   },
   {
     id: 'hackkosice-2026',
@@ -193,6 +205,7 @@ export const hackathons: Hackathon[] = [
     description: 'First event as MLH Coach in Europe.',
     devpostUrl: 'https://hack-kosice-2026.devpost.com/',
     websiteUrl: 'https://hackkosice.com/2026/',
+    logoUrl: 'logos/hackkosice.png',
   },
   {
     id: 'interhack-2026',
@@ -205,6 +218,7 @@ export const hackathons: Hackathon[] = [
     description: 'MLH Coach for the first edition of InterHackBCN, first event with Catalan representation from MLH.',
     devpostUrl: 'https://interhackbcn.devpost.com/',
     websiteUrl: 'https://www.interhackbcn.com/',
+    logoUrl: 'logos/interhack.png',
   },
 
   // ---- Attended ----
@@ -249,6 +263,7 @@ export const hackathons: Hackathon[] = [
     projectUrl: 'https://github.com/carlotacb/Come-withMe',
     websiteUrl: 'https://2018.hackupc.com/',
     devpostUrl: 'https://hackupc2018.devpost.com/',
+    logoUrl: '/logos/HackUPC2018.png',
   },
   {
     id: 'hackeps-2018',
@@ -479,6 +494,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'Bizamaps',
     projectUrl: 'https://github.com/maariafarelo/bizaway',
     devpostUrl: 'https://hackudc-2024.devpost.com/',
+    logoUrl: '/logos/HackUDC2024.png',
   },
   {
     id: 'hackeps-2024',
