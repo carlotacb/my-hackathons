@@ -16,6 +16,7 @@ const A_CORUNA: [number, number] = [43.33306, -8.41095];
 const NORTH_CAROLINA: [number, number] = [35.785074, -78.681561];
 const KOSICE: [number, number] = [48.72366, 21.26271];
 const BCN2: [number, number] = [41.43663, 2.16897];
+const BRUSSELS: [number, number] = [50.680237, 4.852429];
 
 export const hackathons: Hackathon[] = [
   // ---- Organized ----
@@ -153,6 +154,7 @@ export const hackathons: Hackathon[] = [
       "Logistics Director and Finance Director — helping the new logistics team learn to run independently and make their own calls, while also owning the year's budget.",
     websiteUrl: 'https://2024.hackupc.com/',
     devpostUrl: 'https://hackupc-2024.devpost.com/',
+    logoUrl: 'logos/HackUPC2024.png',
   },
   {
     id: 'hackupc-2025',
@@ -165,6 +167,7 @@ export const hackathons: Hackathon[] = [
     description: 'Finance Director, in charge of the budget, and also helping the web dev and logistics teams run smoothly.',
     websiteUrl: 'https://2025.hackupc.com/',
     devpostUrl: 'https://hackupc-2025.devpost.com/',
+    logoUrl: 'logos/HackUPC2025.png',
   },
 
   // ---- Volunteered ----
@@ -219,6 +222,17 @@ export const hackathons: Hackathon[] = [
     devpostUrl: 'https://interhackbcn.devpost.com/',
     websiteUrl: 'https://www.interhackbcn.com/',
     logoUrl: 'logos/interhack.png',
+  },
+  {
+    id: 'google-brussels',
+    name: 'Google Brussels Hackathon',
+    category: 'coached',
+    date: 'July 2026',
+    duration: '8 hours',
+    place: 'Jodoigne, Belgium',
+    coords: BRUSSELS,
+    description: 'MLH Coach in a internal hackathon for Google employees in EMEA area, hosted in Belgium.',
+    logoUrl: 'logos/google.webp',
   },
 
   // ---- Attended ----
