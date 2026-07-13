@@ -291,6 +291,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'Hubder',
     projectUrl: 'https://github.com/carlotacb/hubder',
     devpostUrl: 'https://hackeps2018.devpost.com/',
+    logoUrl: 'logos/HackEPS2018.png',
   },
   {
     id: 'lauzhack-2018',
@@ -361,6 +362,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'ComboChallenge',
     projectUrl: 'https://github.com/elena20ruiz/ComboChallenge',
     devpostUrl: 'https://hackeps2019.devpost.com/',
+    logoUrl: '/logos/HackEPS2019.png',
   },
   {
     id: 'lauzhack-2019',
@@ -415,6 +417,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'DashCovidCenter',
     projectUrl: 'https://github.com/andreugallofre/DashCovidCenter',
     devpostUrl: 'https://hackeps2020.devpost.com/',
+    logoUrl: '/logos/HackEPS2020.png',
   },
   {
     id: 'hackeps-2021',
@@ -427,6 +430,7 @@ export const hackathons: Hackathon[] = [
     projectName: "Identificador d'imatges 3D",
     projectUrl: 'https://devpost.com/software/identificador-de-impressions-3d-per-imatge',
     devpostUrl: 'https://hackeps2021.devpost.com/',
+    logoUrl: '/logos/HackEPS2021.png',
   },
   {
     id: 'hackthenorth-2022',
@@ -470,6 +474,7 @@ export const hackathons: Hackathon[] = [
     projectName: 'Geo Sensor Field',
     projectUrl: 'https://devpost.com/software/gsf-geo-sensor-field',
     devpostUrl: 'https://hackeps2022.devpost.com/',
+    logoUrl: '/logos/HackEPS2022.png',
   },
   {
     id: 'junction-2023',
@@ -495,6 +500,7 @@ export const hackathons: Hackathon[] = [
     coords: LLEIDA,
     description: "Didn't finish a project this time.",
     devpostUrl: 'https://hackeps2023.devpost.com/',
+    logoUrl: '/logos/HackEPS2023.png',
   },
   {
     id: 'hackudc-2024',
@@ -520,5 +526,6 @@ export const hackathons: Hackathon[] = [
     coords: LLEIDA,
     description: "Did a CTF with the team — we didn't win.",
     devpostUrl: 'https://hackeps2024.devpost.com/',
+    logoUrl: '/logos/HackEPS2024.png',
   },
 ];
