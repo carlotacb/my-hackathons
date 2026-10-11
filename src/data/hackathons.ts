@@ -17,6 +17,7 @@ const NORTH_CAROLINA: [number, number] = [35.785074, -78.681561];
 const KOSICE: [number, number] = [48.72366, 21.26271];
 const BCN2: [number, number] = [41.43663, 2.16897];
 const BRUSSELS: [number, number] = [50.680237, 4.852429];
+const SALTILLO: [number, number] = [25.443972, -100.993222];
 
 export const hackathons: Hackathon[] = [
   // ---- Organized ----
@@ -233,6 +234,19 @@ export const hackathons: Hackathon[] = [
     coords: BRUSSELS,
     description: 'MLH Coach in a internal hackathon for Google employees in EMEA area, hosted in Belgium.',
     logoUrl: 'logos/google.webp',
+  },
+  {
+    id: 'hacksaltillo-2026',
+    name: 'Road To Tech 2026',
+    category: 'coached',
+    date: 'October 2026',
+    duration: '24 hours',
+    place: 'Saltillo, Coahuila, Mexico',
+    coords: SALTILLO,
+    description: 'MLH Coach for the first edition of Road To Tech, first event in Mexico representing MLH.',
+    devpostUrl: 'https://hackathon-tecnm-saltillo.devpost.com/',
+    websiteUrl: 'https://www.road2tech.com/',
+    logoUrl: 'logos/roadtotech.png',
   },
 
   // ---- Attended ----
