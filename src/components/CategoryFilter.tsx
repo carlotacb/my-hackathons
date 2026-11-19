@@ -16,6 +16,7 @@ export default function CategoryFilter({ active, onChange, counts }: CategoryFil
         onClick={() => onChange('all')}
       >
         All
+        <span className="pill-count">{Object.values(counts).reduce((total, count) => total + count, 0)}</span>
       </button>
       {CATEGORIES.map((category) => (
         <button

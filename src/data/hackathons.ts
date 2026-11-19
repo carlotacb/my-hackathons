@@ -18,6 +18,8 @@ const KOSICE: [number, number] = [48.72366, 21.26271];
 const BCN2: [number, number] = [41.43663, 2.16897];
 const BRUSSELS: [number, number] = [50.680237, 4.852429];
 const SALTILLO: [number, number] = [25.443972, -100.993222];
+const LONDON_IKU: [number, number] = [51.513070911584045, -0.11734656368593903];
+const ESPOO3: [number, number] = [60.15680343763448, 24.630090411800506];
 
 export const hackathons: Hackathon[] = [
   // ---- Organized ----
@@ -247,6 +249,30 @@ export const hackathons: Hackathon[] = [
     devpostUrl: 'https://hackathon-tecnm-saltillo.devpost.com/',
     websiteUrl: 'https://www.road2tech.com/',
     logoUrl: 'logos/roadtotech.png',
+  },
+  {
+    id: 'iku-2026',
+    name: 'IKU Womxn in STEM Hackathon',
+    category: 'coached',
+    date: 'October 2026',
+    duration: '24 hours',
+    place: 'London, United Kingdom',
+    coords: LONDON_IKU,
+    description: 'MLH Coach for the first edition of IKU Womxn in STEM Hackathon, first event in UK representing MLH.',
+    devpostUrl: 'https://iku-womxn-in-stem-hackathon.devpost.com/project-gallery',
+    websiteUrl: 'https://ikuwomxninstemhackathon.co.uk/',
+    logoUrl: 'logos/iku-logo.png',
+  },{
+    id: 'junction-2026',
+    name: 'Junction 2026',
+    category: 'coached',
+    date: 'November 2026',
+    duration: '36 hours',
+    place: 'Espoo, Finland',
+    coords: ESPOO3,
+    description: 'MLH Coach for Junction 2026, the biggest hackathon in Europe, with around 2000 participants.',
+    websiteUrl: 'https://2026.hackjunction.com/',
+    logoUrl: 'logos/junction.png',
   },
 
   // ---- Attended ----
