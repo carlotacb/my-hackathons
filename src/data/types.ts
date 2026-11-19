@@ -31,3 +31,9 @@ export const CATEGORY_COLORS: Record<Category, string> = {
   volunteered: '#2ecc9a',
   coached: '#f7b731',
 };
+
+/** Extracts the 4-digit year from a date string like "October 2019". */
+export function getYear(h: Hackathon): number {
+  const match = h.date.match(/\d{4}/);
+  return match ? Number(match[0]) : 0;
+}

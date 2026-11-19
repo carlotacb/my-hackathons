@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import maplibregl, { Map as MapLibreMap, Marker, Popup } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { hackathons } from '../data/hackathons';
-import { CATEGORY_COLORS, type Category, type Hackathon } from '../data/types';
+import { CATEGORY_COLORS, type Hackathon } from '../data/types';
 
 const DARK_STYLE = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
 
@@ -34,10 +33,10 @@ function popupEntryHtml(h: Hackathon) {
 }
 
 interface MapViewProps {
-  activeCategory: Category | 'all';
+  items: Hackathon[];
 }
 
-export default function MapView({ activeCategory }: MapViewProps) {
+export default function MapView({ items }: MapViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const markersRef = useRef<Marker[]>([]);
@@ -70,10 +69,10 @@ export default function MapView({ activeCategory }: MapViewProps) {
       markersRef.current.forEach((marker) => marker.remove());
       markersRef.current = [];
 
-      const grouped = new Map<string, { coords: [number, number]; entries: typeof hackathons }>();
+      const grouped = new Map<string, { coords: [number, number]; entries: Hackathon[] }>();
 
-      hackathons
-        .filter((h) => h.coords && (activeCategory === 'all' || h.category === activeCategory))
+      items
+        .filter((h) => h.coords)
         .forEach((h) => {
           const key = h.coords!.join(',');
           if (!grouped.has(key)) grouped.set(key, { coords: h.coords!, entries: [] });
@@ -102,7 +101,7 @@ export default function MapView({ activeCategory }: MapViewProps) {
     } else {
       map.once('load', applyMarkers);
     }
-  }, [activeCategory]);
+  }, [items]);
 
   return <div ref={containerRef} className="map-view" />;
 }
