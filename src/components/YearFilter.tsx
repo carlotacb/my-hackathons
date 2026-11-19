@@ -6,7 +6,6 @@ interface YearFilterProps {
 }
 
 export default function YearFilter({ years, active, onChange, counts }: YearFilterProps) {
-  const total = years.reduce((sum, y) => sum + (counts[y] ?? 0), 0);
   return (
     <label className={`year-select ${active !== 'all' ? 'year-select-active' : ''}`}>
       <span className="sr-only">Filter hackathons by year</span>
@@ -14,10 +13,10 @@ export default function YearFilter({ years, active, onChange, counts }: YearFilt
         value={active}
         onChange={(e) => onChange(e.target.value === 'all' ? 'all' : Number(e.target.value))}
       >
-        <option value="all">All years ({total})</option>
+        <option value="all">All years</option>
         {years.map((year) => (
           <option key={year} value={year} disabled={!counts[year] && active !== year}>
-            {year} ({counts[year] ?? 0})
+            {year}
           </option>
         ))}
       </select>
